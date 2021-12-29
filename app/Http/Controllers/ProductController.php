@@ -26,7 +26,19 @@ class ProductController extends Controller
     "message" => "Product List",
     "data" => $data
     ]);  
+  }  
+  public function search($name)
+  {
+    $data = DB::table('products')->select('*')->where('product_name', 'LIKE', "%$name%")->get();
+
+    // $products = Product::all();
+    return response()->json([
+    "success" => true,
+    "message" => "Product List",
+    "data" => $data
+    ]);  
   }
+  
 
 
   public function add(Request $request)
