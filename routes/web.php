@@ -27,12 +27,11 @@ Route::get('/product/search/{name}', [ProductController::class, 'search']);
 Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::post('/product/add', [ProductController::class, 'add']);
 Route::put('/product/{id}/update', [ProductController::class, 'update']);
-Route::delete('/product/{id}', [ProductController::class, 'del']);
-
+Route::put('/product/{id}/delete', [ProductController::class, 'del']);
 
 
 Route::get('/catagory', [CatagoryController::class, 'index']);
 Route::get('/catagory/{id}', [CatagoryController::class, 'show']);
 Route::post('/catagory/add', [CatagoryController::class, 'add']);
 Route::put('/catagory/{id}/update', [CatagoryController::class, 'update']);
-Route::delete('/catagory/{id}', [CatagoryController::class, 'del']);
+Route::put('/catagory/{id}/delete', [CatagoryController::class, 'del']);

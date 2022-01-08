@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->integer('product_price');
             $table->string('product_key');
             $table->integer('catagory_id');
+            $table->string('active');
+
         });
     }
 

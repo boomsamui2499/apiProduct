@@ -124,7 +124,7 @@ class ProductController extends Controller
 
   public function del($id)
   {
-    DB::table('products')->where('product_id',$id)->delete();
+    DB::table('products')->where('product_id',$id)->update(['active' => 0]);
     return response()->json([
     "success" => true,
     "message" => "Product deleted successfully.",
