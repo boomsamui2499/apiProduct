@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/token', function () {
-    return csrf_token(); 
+    return csrf_token();
 });
 // Route::resource('product', 'App\Http\Controller\ProductController');
 Route::get('/product', [ProductController::class, 'index']);
@@ -28,6 +28,9 @@ Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::post('/product/add', [ProductController::class, 'add']);
 Route::put('/product/{id}/update', [ProductController::class, 'update']);
 Route::put('/product/{id}/delete', [ProductController::class, 'del']);
+// Route::post('/product/upload-file', [ProductController::class, 'store']);
+// Route::post('/product/upload-file', 'App\Http\Controllers\ProductController@fileUpload');
+
 
 
 Route::get('/catagory', [CatagoryController::class, 'index']);
