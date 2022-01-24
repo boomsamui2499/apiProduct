@@ -15,7 +15,7 @@ class ProductController extends Controller
 {
   public function index()
   {
-    $data = DB::table('products')->select('*')->get();
+    $data = DB::table('products')->select('*')->where('active', 1)->get();
 
     // $products = Product::all();
     return response()->json([
